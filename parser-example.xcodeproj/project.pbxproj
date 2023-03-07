@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		E95CF88029B62B730012C6AD /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95CF87F29B62B730012C6AD /* main.swift */; };
+		E95CF88829B62BC80012C6AD /* SwiftParser in Frameworks */ = {isa = PBXBuildFile; productRef = E95CF88729B62BC80012C6AD /* SwiftParser */; };
+		E95CF88A29B62BC80012C6AD /* SwiftSyntax in Frameworks */ = {isa = PBXBuildFile; productRef = E95CF88929B62BC80012C6AD /* SwiftSyntax */; };
+		E95CF88C29B633D40012C6AD /* FileLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95CF88B29B633D40012C6AD /* FileLoader.swift */; };
+		E95CF88E29B634490012C6AD /* Visitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95CF88D29B634490012C6AD /* Visitor.swift */; };
+		E95CF89029B6346C0012C6AD /* NameSyntax.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95CF88F29B6346C0012C6AD /* NameSyntax.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +30,9 @@
 /* Begin PBXFileReference section */
 		E95CF87C29B62B730012C6AD /* parser-example */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "parser-example"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E95CF87F29B62B730012C6AD /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		E95CF88B29B633D40012C6AD /* FileLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileLoader.swift; sourceTree = "<group>"; };
+		E95CF88D29B634490012C6AD /* Visitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Visitor.swift; sourceTree = "<group>"; };
+		E95CF88F29B6346C0012C6AD /* NameSyntax.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameSyntax.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +40,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E95CF88829B62BC80012C6AD /* SwiftParser in Frameworks */,
+				E95CF88A29B62BC80012C6AD /* SwiftSyntax in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +68,9 @@
 			isa = PBXGroup;
 			children = (
 				E95CF87F29B62B730012C6AD /* main.swift */,
+				E95CF88B29B633D40012C6AD /* FileLoader.swift */,
+				E95CF88F29B6346C0012C6AD /* NameSyntax.swift */,
+				E95CF88D29B634490012C6AD /* Visitor.swift */,
 			);
 			path = "parser-example";
 			sourceTree = "<group>";
@@ -78,6 +91,10 @@
 			dependencies = (
 			);
 			name = "parser-example";
+			packageProductDependencies = (
+				E95CF88729B62BC80012C6AD /* SwiftParser */,
+				E95CF88929B62BC80012C6AD /* SwiftSyntax */,
+			);
 			productName = "parser-example";
 			productReference = E95CF87C29B62B730012C6AD /* parser-example */;
 			productType = "com.apple.product-type.tool";
@@ -106,6 +123,9 @@
 				Base,
 			);
 			mainGroup = E95CF87329B62B730012C6AD;
+			packageReferences = (
+				E95CF88629B62BC80012C6AD /* XCRemoteSwiftPackageReference "swift-syntax" */,
+			);
 			productRefGroup = E95CF87D29B62B730012C6AD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -120,6 +140,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E95CF88C29B633D40012C6AD /* FileLoader.swift in Sources */,
+				E95CF88E29B634490012C6AD /* Visitor.swift in Sources */,
+				E95CF89029B6346C0012C6AD /* NameSyntax.swift in Sources */,
 				E95CF88029B62B730012C6AD /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,6 +303,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E95CF88629B62BC80012C6AD /* XCRemoteSwiftPackageReference "swift-syntax" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-syntax.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E95CF88729B62BC80012C6AD /* SwiftParser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E95CF88629B62BC80012C6AD /* XCRemoteSwiftPackageReference "swift-syntax" */;
+			productName = SwiftParser;
+		};
+		E95CF88929B62BC80012C6AD /* SwiftSyntax */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E95CF88629B62BC80012C6AD /* XCRemoteSwiftPackageReference "swift-syntax" */;
+			productName = SwiftSyntax;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E95CF87429B62B730012C6AD /* Project object */;
 }
